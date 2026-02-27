@@ -1,41 +1,94 @@
-🌦️ Clima Agora
-📌 Objetivo
-Este projeto foi desenvolvido como estudo e demonstração dos meus conhecimentos em desenvolvimento front-end com React, TailwindCSS e integração com APIs externas.
-O foco foi criar uma aplicação moderna e interativa de previsão do tempo, aplicando conceitos de:
-- Consumo de APIs (OpenWeatherMap).
-- Gerenciamento de estado com React Hooks.
-- Alternância de tema (claro/escuro) com Context API.
-- Uso de animações e transições para melhorar a experiência do usuário.
+# 🌦️ Clima Agora
 
-🚀 Como rodar o projeto
-- Clone o repositório:
-git clone https://github.com/lfaz3245/ClimaAgora-SitedePrevis-odoTempo-.git
-cd ClimaAgora-SitedePrevis-odoTempo-
-- Instale as dependências:
-npm install
-- Configure a chave da API:
-- Crie um arquivo .env na raiz do projeto.
-- Adicione sua chave da API do OpenWeatherMap:
-VITE_WEATHER_API_KEY=sua_chave_aqui
-- Execute o projeto:
-npm run dev
-- Abra no navegador:
-http://localhost:5173
+O **Clima Agora** é uma aplicação web moderna e interativa de previsão do tempo, desenvolvida para oferecer informações meteorológicas precisas com uma interface elegante e responsiva. O projeto foi construído utilizando **React**, **TailwindCSS** e integrações com a API do **OpenWeatherMap**.
+
+---
+
+## 🚀 Funcionalidades
+
+- **Busca por Cidade:** Pesquise o clima em tempo real de qualquer cidade do mundo.
+- **Geolocalização:** Obtenha a previsão do tempo baseada na sua localização atual com um clique.
+- **Previsão Estendida:** Visualize a previsão para os próximos dias.
+- **Mapa Interativo:** Mini-mapa integrado mostrando a localização da cidade pesquisada (via Leaflet).
+- **Alternância de Unidades:** Troque facilmente entre Celsius (°C) e Fahrenheit (°F).
+- **Modo Escuro/Claro:** Suporte a temas com transições suaves, gerenciado via Context API.
+- **Interface Dinâmica:** Animações personalizadas, relógio em tempo real e seção de notícias simuladas.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- **[React](https://reactjs.org/):** Biblioteca principal para a construção da interface.
+- **[TailwindCSS](https://tailwindcss.com/):** Framework CSS para estilização rápida e responsiva.
+- **[React Router](https://reactrouter.com/):** Gerenciamento de rotas e navegação.
+- **[Leaflet](https://leafletjs.com/) & [React Leaflet](https://react-leaflet.js.org/):** Mapas interativos.
+- **[Heroicons](https://heroicons.com/):** Conjunto de ícones SVG.
+- **[OpenWeatherMap API](https://openweathermap.org/api):** Fonte de dados meteorológicos.
+- **Context API:** Gerenciamento de estado global para o tema da aplicação.
+
+---
+
+## 📦 Estrutura do Projeto
+
+```text
+clima-dashboard/
+├── public/              # Arquivos estáticos
+├── src/
+│   ├── components/      # Componentes reutilizáveis (SearchBar, WeatherCard, MiniMap, etc.)
+│   ├── services/        # Integração com APIs externas (weatherService.js)
+│   ├── ThemeContext.js  # Gerenciamento de tema (Light/Dark)
+│   ├── Home.js          # Página de boas-vindas com relógio e notícias
+│   ├── App.js           # Página principal de busca e previsão
+│   └── index.js         # Ponto de entrada da aplicação
+├── .env                 # Variáveis de ambiente (API Key)
+└── tailwind.config.js   # Configurações do Tailwind
+```
+
+---
+
+## 🔧 Como Rodar o Projeto
+
+### Pré-requisitos
+- Node.js instalado.
+- Uma chave de API gratuita do [OpenWeatherMap](https://home.openweathermap.org/users/sign_up).
+
+### Passo a Passo
+
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/lfaz3245/ClimaAgora-SitedePrevis-odoTempo-.git
+   cd ClimaAgora-SitedePrevis-odoTempo-/clima-dashboard
+   ```
+
+2. **Instale as dependências:**
+   ```bash
+   npm install
+   ```
+
+3. **Configure as variáveis de ambiente:**
+   Crie um arquivo `.env` na pasta `clima-dashboard/` e adicione sua chave:
+   ```env
+   REACT_APP_WEATHER_API_KEY=sua_chave_aqui
+   ```
+
+4. **Inicie o servidor de desenvolvimento:**
+   ```bash
+   npm start
+   ```
+
+5. **Acesse no navegador:**
+   [http://localhost:3000](http://localhost:3000)
+
+---
+
+## 🎯 Objetivo do Projeto
+
+Este projeto foi desenvolvido como parte de um portfólio pessoal para demonstrar habilidades em:
+- Consumo e tratamento de dados de APIs REST.
+- Gerenciamento de estado complexo e efeitos colaterais com Hooks (`useState`, `useEffect`).
+- Criação de layouts modernos e responsivos com TailwindCSS.
+- Implementação de UX/UI intuitiva com feedback visual para o usuário.
 
 
 
-🛠️ Tecnologias usadas
-- React → Biblioteca principal para construção da interface.
-- React Router → Navegação entre páginas.
-- TailwindCSS → Estilização moderna e responsiva.
-- Heroicons → Ícones SVG otimizados.
-- OpenWeatherMap API → Fonte dos dados meteorológicos.
-- Context API → Controle global de tema (light/dark).
-- Vite → Ferramenta de build e desenvolvimento rápido.
-
-🎯 Resultados
-- Interface moderna e responsiva, com modo claro e escuro.
-- Área de pesquisa com validação e popup educado quando o campo está vazio.
-- Botões animados (Buscar, Usar minha localização, Alternar unidade) com efeitos de pulse, bounce e scale.
-- Exibição de mapa interativo, previsão atual e previsão semanal.
-- Layout consistente e atraente, demonstrando domínio de UI/UX e integração com APIs.
+Desenvolvido com 💙 por [Kennedy](https://github.com/lfaz3245).
